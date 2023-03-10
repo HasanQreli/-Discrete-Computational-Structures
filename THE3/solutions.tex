@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+
+\begin{document}
+
+\section*{Student Information }
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Hasan Küreli  \\
+Id Number :  2580751\\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+Let $P(n) = 6^{2n}-1$ is divisible by 5 and 7.\\
+Basis: $P(1) = 35$ is divisible by 5 and 7.\\
+Inductive: \\
+Inductive hypothesis: For $n=k$, $6^{2k}-1$ is divisible by 5 and 7 \\
+Show $n=k+1$, $6^{2k+2} -1$ \\
+$36 \cdot 6^{2k} -1$ \\
+$35 \cdot 6^{2k} + 6^{2k} -1$ \\
+Since both $35 \cdot 6^{2k}$ and $6^{2k} -1$ are divisible by 5 and 7, $35 \cdot 6^{2k} + 6^{2k} -1$ is divisible by 5 and 7. \\
+So $6^{2n}-1$ is divisible by 5 and 7, $\forall n \in \overline{\mathbb{N}}^{+}$
+
+\section*{Answer 2}
+
+Basis: $H_0 = 1 \le 9^0 =1,$ \\$H_1 = 5 \le 9^1 =9,\\ H_2 = 7\le 9^2 = 81$\\
+Inductive step: Assume $H_i \le 9^i$ for $0 \le i \le k$\\
+Show $H_{k+1}$\\
+Since $H_k \le 9^k$, $H_{k-1} \le 9^{k-1}$ and $H_{k-2} \le 9^{k-2}$\\ 
+$H_{k+1} = 8\cdot H_{k} +8\cdot H_{k-1} + 9 \cdot H_{k-2} \le 8\cdot 9^{k} + 8\cdot 9^{k-1} +9\cdot 9^{k-2} = 9^{k+1}$\\
+$H_{k+1} \le 9^{k+1}$\\
+Hence, $H_n \le 9^n$ for $n \in \mathbb{N}$
+
+
+
+\section*{Answer 3}
+Let's first calculate the strings with 4 consecutive 1's.\\
+4 consecutive 1's can start in the positions 1,2,3,4 and 5. (as there are 8 positions.) \\
+Starting position 1: (strings of form 1111XXXX)\\
+Remaining 4 positions can be anything $ =2^4 = 16$\\
+Starting position 2: (strings of form 01111XXX)\\
+First position must be 0 or we will be recounting the strings from 1st position.\\
+Remaining 3 positions can be anything $ =2^3 = 8$\\
+Starting position 3: (strings of form X01111XX)\\
+Position 2 must be 0 or we will be recounting the strings from 2nd position.\\
+Remaining 3 positions can be anything $ =2^3 = 8$\\
+Starting position 4: (strings of form XX01111X)\\
+Position 3 must be 0 or we will be recounting the strings from 3rd position.\\
+Remaining 3 positions can be anything $ =2^3 = 8$\\
+Starting position 5: (strings of form XXX01111)\\
+Position 4 must be 0 or we will be recounting the strings from 4th position.\\
+Remaining 3 positions can be anything $ =2^3 = 8$\\
+Which makes a total of 48 different strings. \\ 
+If we calculate 4 consecutive 0's in the same manner we will again get 48 different strings.\\
+Out of these 96 strings we counted 2 of them twice (00001111 and 11110000) so we must subtract 2 from the total 96\\
+We get $96-2=94$ different strings.
+
+\section*{Answer 4}
+Firstly we must select one of the 10 stars $= C(10,1) = 10$\\
+Then we choose 2 of the 20 habitable planets $= C(20,2) = 190$\\
+Then we choose 8 of the 80 nonhabitable planets $= C(80,8) = 28987537150$\\
+Then we put the 10 planets in order by paying attention to the condition given in the question.\\
+We can look at the 3 conditions where there is 6, 7 or 8 nonhabitable planets between the two habitable ones.\\
+For 6 planets in between $= 2!\cdot C(8,6) \cdot 6! \cdot 3!$\\
+For 7 planets in between $= 2!\cdot C(8,7) \cdot 7! \cdot 2!$\\
+For 8 planets in between $= 2!\cdot C(8,8) \cdot 8! \cdot 1!$\\
+The $2!$ in the beginning is because the habitable planets can change places. The next combination is for selecting the nonhabitable planets to go between and then we sort the planets we selected. And finally we calculate the possible change between the left out nonhabitable planets and the sequence we created with the habitable planets and nonhabitables that we selected.\\
+By sum rule we add the results of this 3 condtions and we get $=8!\cdot 12 =  483840$\\
+Finally by product rule we multiply all our results from selecting the star and planets and putting the planets in order\\
+We get the result $= C(10, 1) \cdot C(20,2) \cdot C(80,8) \cdot 8! \cdot 12 = 2.6648127\cdot 10^{19}$ 
+
+
+\section*{Answer 5}
+\paragraph{a)}
+Let $P(n)$ be the function which gives us how many different ways the robot can move to n cells away from its initial location.\\
+We can calculate how many different ways there are by looking at the three previous steps.\\
+Let's say we want to calculate P(k), $k \in \mathbb{N}$ and $  k\ge 4$.\\
+We can move 1 step from position $k-1$, 2 steps from position $k-2$ or 3 steps from position $k-3$ to come to k (We do not calculate things like moving 1-1-1 steps from $k-3$ because we already count that in the other two) .\\
+So if we add $P(k-1), P(k-2), P(k-3)$ we will have the result of P(k).\\
+So we can form a formula like:\\
+$P(n) = P(n-1) + P(n-2) + P(n-3)$, $n \in \mathbb{N}$ and $  n\ge 4$
+
+\paragraph{b)}
+The initial conditions are: \\
+$P(1)= 1$ : $1$ \\
+$P(2)=2$ : $2,1-1$ \\
+$P(3)=4$ : $3,2-1,1-2,1-1-1$ \\
+
+\paragraph{c)}
+Using our recurrence relation: \\
+$P(9) = P(8) + P(7) + P(6)$\\
+$P(8) = P(7) + P(6) + P(5)$\\
+      $\ \ \ \ \vdots$\\
+$P(4) = P(3) + P(2) + P(1)$\\
+$P(4) = 4+2+1=7$\\
+$P(5) = 13$\\
+$P(6) = 24$\\
+$P(7) = 44$\\
+$P(8) = 81$\\
+$P(9) = 81+ 44+24 = 149$\\
+\end{document}

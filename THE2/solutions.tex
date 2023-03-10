@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name :  Hasan Küreli\\
+Id Number :  2580751\\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\paragraph{a)} 
+To test if it is surjective $\forall y \in \mathbb{R} , \exists x \in \mathbb{R}$ such that $f(x) = y$ must be true but since  $x= \pm \sqrt{y}$ $ y\ge 0$ so negative values for y are not covered. It is not surjective. \\
+To test if it is injective suppose $f(a) = f(b)$ for $a,b\in \mathbb{R}$\\
+$a^2 = b^2$\\
+$|a| = |b|$\\$a=\pm b$\\
+So it is not injective.
+
+\paragraph{b)}
+To test if it is surjective $\forall y \in \mathbb{R} , \exists x \in\overline{\mathbb{R}}^{+}$ such that $f(x) = y$ must be true but since  $x= \pm \sqrt{y}$ $ y\ge 0$ so negative values for y are not covered. It is not surjective. \\
+To test if it is injective suppose $f(a) = f(b)$ for $a,b\in \overline{\mathbb{R}}^{+}$\\
+$a^2 = b^2$\\
+$|a| = |b|$\\$a=b$\\
+So it is injective.
+
+\paragraph{c)}
+To test if it is surjective $\forall y \in \overline{\mathbb{R}}^{+} , \exists x \in \mathbb{R}$ such that $f(x) = y$ must be true but since  $x= \pm \sqrt{y}$, $ y\ge 0$ so it holds for all values of y it is surjective. \\
+To test if it is injective suppose $f(a) = f(b)$ for $a,b\in \mathbb{R}$\\
+$a^2 = b^2$\\
+$|a| = |b|$\\$a=\pm b$\\
+So it is not injective.
+
+\paragraph{d)}
+To test if it is surjective $\forall y \in \overline{\mathbb{R}}^{+} , \exists x \in \overline{\mathbb{R}}^{+}$ such that $f(x) = y$ must be true but since  $x= \pm \sqrt{y}$, $ y\ge 0$ so it holds for all values of y it is surjective. \\
+To test if it is injective suppose $f(a) = f(b)$ for $a,b\in \overline{\mathbb{R}}^{+}$\\
+$a^2 = b^2$\\
+$|a| = |b|$\\$a=b$\\
+So it is injective.
+
+
+
+\section*{Answer 2}
+\paragraph{a)}
+Since $x\in A \subset \mathbb{Z}$ then if $x\neq x_0$, $||x-x_0||\geq 1$\\
+So if we assume $\delta = 0.9$ the left side of the expression $(||x -x_0|| < \delta \implies ||f(x) -f(x_0)|| < \epsilon)$ is always 0 when $x\neq x_0$ and hence the expression is always true.\\ 
+If $x = x_0$ the left side becomes 1 and right side also always 1 because $||f(x) -f(x_0)|| < \epsilon,\forall \epsilon \in \overline{\mathbb{R}}^{+}$ since $||f(x) -f(x_0)||=0$ and the expression will continue to be true.\\
+So we can say every function $f : A\subset \mathbb{Z} -> \mathbb{R}$ is continuous.
+
+
+
+\paragraph{b)}
+Assume that $f$ is not a constant function. We can find $\exists x,x_0 \in \overline{\mathbb{R}}^{+}$ such that $f(x) \neq f(x_0)$. Since $f(x),f(x_0) \in \mathbb{Z}$, $||f(x) -f(x_0)|| \geq 1$ which makes the right side of the expression $(||x -x_0|| < \delta \implies ||f(x) -f(x_0)|| < \epsilon)$ false for $\forall \epsilon \in \overline{\mathbb{R}}^{+}$ and since $||x -x_0||$  is finite $\exists \delta \in \overline{\mathbb{R}}^{+}$ such that $(||x -x_0|| < \delta)$ so the left side is true.
+ Which makes the expression false hence f is not continuous.
+
+ Assume that $f$ is a constant function. Since $\forall x,x_0,f(x)=f(x_0)$ the right side of the expression $(||x -x_0|| < \delta \implies ||f(x) -f(x_0)|| < \epsilon)$ is true $\forall \epsilon \in \overline{\mathbb{R}}^{+}$ because $f(x)-f(x_0)=0$. Which makes the expression true since $false\implies true$ and $true\implies true$ are both true.
+ 
+ We learned that if f is not a constant fucntion it is not continuous. By using contraposition we can derive "If f is continuous it is a constant function." And also we proved that if f is a constant function it is continuous. So we can say that it is necessary and sufficient for a function of the form $f : A\subset \mathbb{R} -> \mathbb{Z}$ to be constant for it to be continuous.
+
+\section*{Answer 3}
+\paragraph{a)}
+$$X=A_1\times A_2 \times ...\times A_n=\{(a_1,a_2,...,a_n)|a_i\in A_i \text{ for } i=1,2,...,n\}$$
+
+Let's denote the elements of sets with $a_{ij}$ where $a_i\in A_i$ and j is the order of the element in the set.
+
+X will be of the form:
+
+\begin{tabular}{c}
+$\{(a_{11},a_{21},...,a_{n1}),$\\
+ $(a_{12},a_{21},...,a_{n1}),$\\
+ $(a_{11},a_{22},...,a_{n1}),$\\
+ ...\\
+ $(a_{11},a_{21},...,a_{n2}),$\\ 
+ ...\}\\
+
+
+\end{tabular}
+
+Since we can write all tuples contiuously according to the sum of their j values which will go from n to some countable number which is the sum of the number of elements of each of the sets of the form $A_i$. And make a 1-1 correspondance with the set of natural numbers.
+
+Hence we can say that this set is countable.
+\paragraph{b)}
+The infinite product will look like:
+
+$$B= X\times X\times...\times\ X \times ...=\{(a_1,a_2,...,a_n,...)|a_i\in \{0,1\},n,i\in \mathbb{N}\}$$
+
+it will be the infinite combination of these tuples.
+
+Let's say $a_{ij}$ is the jth element of the ith tuple. When we write all combinations of these tuples we can still find an element such that $(a_1,a_2,...,a_n)$ which is not in the set by using an algorithm like $a_n = 0 \text{ if } a_{nn}=1 \text{ and } a_{nn} = 1 \text{ if } aii=0$
+
+So it is uncountably infinite.
+\section*{Answer 4}
+$$(n!)^2, 5^n, 2^n,n^{51}+n^{49},n^{50},\sqrt{n}\cdot\log(n),(log(n))^2$$
+\paragraph{a)} 
+$$\lim_{n \to \infty} \frac{(n!)^2}{5^n}$$
+
+$$\lim_{n \to \infty} \frac{n^2\cdot{n-1}^2\cdot{n-3}^2...}{5\cdot5\cdot5\cdot...} \geq 
+\lim_{n \to \infty} \left( \frac{9}{5} \right)^{n-2}\cdot \frac{4}{25}=\infty$$
+
+since right side's limit is $\infty$ by comparison test left side is also $\infty$
+
+We can say $(n!)^2$ grows faster than $5^n$
+
+Hence by limit asymptotic theorem $5^n$ is O($(n!)^2$) 
+
+
+\paragraph{b)} 
+$$\lim_{n \to \infty} \left(\frac{5}{2}\right)^n = \infty$$
+
+We can say $5^n$ grows faster than $2^n$
+
+Hence by limit asymptotic theorem $2^n$ is O($5^n$) 
+
+\paragraph{c)}
+$$\lim_{n \to \infty} \frac{2^n}{n^{51}+n^{49}}$$
+
+if we apply L'Hospital rule 51 times:
+
+$$\lim_{n \to \infty} \frac{2^n\cdot{(\ln2)}^{51}}{51!} = \infty$$
+
+We can say $2^n$ grows faster than $n^{51}+n^{49}$
+
+Hence by limit asymptotic theorem $n^{51}+n^{49}$ is O($2^n$) 
+
+\paragraph{d)}
+$$\lim_{n \to \infty} \frac{n^{51}+n^{49}}{n^{50}} =lim_{n\to \infty} ( \frac{n+\frac{1}{n}}{1})=\infty$$
+
+We can say $n^{51}+n^{49}$ grows faster than $n^{50}$
+
+Hence by limit asymptotic theorem $n^{50}$ is O($n^{51}+n^{49}$) 
+\paragraph{e)}
+$$\lim_{n \to \infty} \frac{n^{50}}{\sqrt{n}\cdot\log(n)}=
+\lim_{n \to \infty} \frac{n^{\frac{99}{2}}}{\log(n)}$$
+
+Apply L'Hospital rule:
+
+$$\lim_{n \to \infty} {\frac{99}{2}}\cdot n^{\frac{99}{2}} = \infty$$
+
+We can say $n^{50}$ grows faster than $\sqrt{n}\cdot\log(n)$
+
+Hence by limit asymptotic theorem $\sqrt{n}\cdot\log(n)$ is O($n^{50}$) 
+
+\paragraph{f)}
+$$\lim_{n \to \infty} \frac{\sqrt{n}\cdot\log(n)}{(log(n))^2}$$
+
+Apply L'Hospital rule:
+
+$$\lim_{n \to \infty} \frac{1}{2}\cdot \sqrt{n} = \infty$$
+
+We can say $\sqrt{n}*\log(n)$ grows faster than $(log(n))^2$
+
+Hence by limit asymptotic theorem $(log(n))^2$ is O($\sqrt{n}\cdot\log(n)$) 
+
+\section*{Answer 5}
+\paragraph{a)}
+$$\gcd(94,134) =\gcd(134,94\bmod{134}) =\gcd(94,134\bmod94) =\gcd(40,94\bmod 40)$$ 
+
+$$=\gcd(14,40\bmod14)=\gcd(12,14\bmod12) =\gcd(2,12\bmod2) =\gcd(2,0)$$
+
+
+
+Since the second argument became 0 the function returns the first argument 2.
+
+gcd(94,134)=2
+\paragraph{b)}
+Goldbach's conjecture:
+$$A= \{x|\text{x is a prime number}\}$$
+
+$$\exists a,b \in A$$
+
+$$2\cdot k = a+b \text{ for }\forall k>1 \text{ and } \forall k\in \mathbb{Z}$$
+
+To find even integers that are greater than 5 as a sum of three primes we can add 2 to both sides of the above equation:
+
+$\exists a,b \in A$
+
+$2\cdot k+2 = a+b+2$ for $k>1$ and $\forall k\in \mathbb{Z}$
+
+Since 2 is a prime number and $2\cdot k +2$ represents all even numbers greater than 5 this shows that we can write all even numbers greater than 5 using 3 prime numbers.
+
+To find odd numbers we can do the same thing using 3 this time:
+
+$\exists a,b \in A$
+
+$2\cdot k+3 = a+b+3$ for $k>1$ and $\forall k\in \mathbb{Z}$
+
+In this equation since 3 is also a prime number and $2\cdot k+3$ represents all odd numbers greater than 5. So we can write all odd numbers greater than 5 using 3 prime numbers.
+
+We have showed that we can calculate both even and odd numbers that are greater than 5 using three prime numbers. Which means we can write all numbers greater than 5 using 3 prime numbers.
+\end{document}
